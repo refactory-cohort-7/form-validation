@@ -1,3 +1,12 @@
+let name_field = () => {
+    var username = document.candidate_info.field1;
+    username.style.border = '2px solid gold';
+}
+
+username.addEventListener('focus', name_field);
+username.addEventListener('blur', name_field);
+
+
 let userName_func = () => {
     var username = document.candidate_info.field1;
     const username_minimum = 5;
