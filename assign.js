@@ -1,5 +1,7 @@
+var username = document.candidate_info.field1;
+
 let name_field = () => {
-    var username = document.candidate_info.field1;
+
     username.style.border = '2px solid gold';
 }
 
@@ -86,24 +88,29 @@ let tel_phone_func = () => {
     }
 }
 
-//Function to validate the About field
+//Function to validate the About field not allowing more than 50 words.
 let about_func = () => {
     var about_user = document.candidate_info.about_field;
 
-    str1 = about_user.value;
+    var str1 = about_user.value;
     //exclude  start and end white-space
     str1 = str1.replace(/(^\s*)|(\s*$)/gi, "");
     //convert 2 or more spaces to 1  
     str1 = str1.replace(/[ ]{2,}/gi, " ");
     // exclude newline with a start spacing  
     str1 = str1.replace(/\n /, "\n");
+
     var num_of_words = str1.split(' ').length;
 
-    if (num_of_words < 4) {
-        alert("less than 4");
+    if (num_of_words > 50) {
+        alert("Please you should not exceed 50 words");
+
+        about_user.style.border = "3px solid red";
+        about_user.focus();
+        return false;
 
     } else {
-        alert("more than 5")
+        about_user.style.border = "3px solid green";
     }
 
 }
