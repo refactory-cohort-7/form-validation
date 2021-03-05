@@ -3,7 +3,8 @@ const letters = /^[A-Za-z]+$/;
 const emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const minName = 5;
 const phoneFormat = /^[0-9]+$/;
-const minAbout = 50;
+const maxAbout = 50;
+
 
 //function for validating the name
 let formName = () => {
@@ -76,7 +77,7 @@ let formAbout = () => {
   /**about section can be left empty
    * checking if the length of the about field is less than 50 characters
    * **/
-  if (about.value.length > minAbout) {
+  if (about.value.length > maxAbout) {
     about.focus();
     about.style.border = '2px solid red';
     alert(
@@ -110,10 +111,9 @@ let formInterests = () => {
 let addtionalInfo = () => {
   var info = document.myForm.field6;
   /**
-   * additional information section can be left empty
    * additional info should be less than 50 characters
    */
-  if (info.value.length > minAbout) {
+  if (info.value.length > maxAbout) {
     info.focus();
     info.style.border = '2px solid red';
     alert(
@@ -121,11 +121,18 @@ let addtionalInfo = () => {
     );
     return false;
   }
+  //checking if the additioanl information section has been left empty
+  if (info.value == '') {
+    info.style.border = '2px solid red';
+    info.focus();
+    return false;
+  }
 };
 
 //the function comtaining all other functions which will be called invoked in the eventlistner
 let validation = () => {
   formName();
+  formInterests();
   formEmail();
   formPhone();
   formAbout();
