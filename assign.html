@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assign</title>
+    <link rel="stylesheet" href="./fontawesome.min.css" />
+    <link rel="stylesheet" href="./assign.css" />
+  </head>
+  <body>
+    <div class="form-style-5">
+      <form action="#" name="custInform">
+        <fieldset>
+          <legend><span class="number">1</span> Candidate Info</legend>
+
+          <!-- Grouped for easy positioning. -->
+          <div id="name_field" class="spacing_inputs">
+            <input type="text" name="field1" placeholder="Your Name *" />
+
+            <p class="field1_info warnP"></p>
+          </div>
+
+          <!-- Grouped for easy positioning. -->
+          <div id="email_field" class="spacing_inputs">
+            <input type="email" name="field2" placeholder="Your Email *" />
+
+            <p class="field2_info warnP"></p>
+          </div>
+
+          <!-- Grouped for easy positioning. -->
+          <div id="phone_field" class="spacing_inputs">
+            <input type="text" name="field3" placeholder="Your Phone *" />
+
+            <p class="field3_info warnP"></p>
+          </div>
+
+          <!-- Grouped for easy positioning. -->
+          <div id="about_field" class="spacing_inputs">
+            <textarea name="field4" placeholder="About yourself"></textarea>
+
+            <p class="field4_info warnP"></p>
+          </div>
+
+          <label for="job">Interests:</label>
+          <select id="job" name="field5">
+            <optgroup label="Indoors">
+              <option value="fishkeeping">Fishkeeping</option>
+              <option value="reading">Reading</option>
+              <option value="boxing">Boxing</option>
+              <option value="debate">Debate</option>
+              <option value="gaming">Gaming</option>
+              <option value="snooker">Snooker</option>
+              <option value="other_indoor">Other</option>
+            </optgroup>
+            <optgroup label="Outdoors">
+              <option value="football">Football</option>
+              <option value="swimming">Swimming</option>
+              <option value="fishing">Fishing</option>
+              <option value="climbing">Climbing</option>
+              <option value="cycling">Cycling</option>
+              <option value="other_outdoor">Other</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend><span class="number">2</span> Additional Info</legend>
+
+          <!-- Grouped for easy positioning. -->
+          <div id="aboutSch_field" class="spacing_inputs">
+            <textarea name="field6" placeholder="About Your School"></textarea>
+
+            <p class="field6_info warnP"></p>
+          </div>
+        </fieldset>
+        <input type="submit" value="Apply" />
+      </form>
+    </div>
+    <script src="./fontawesome.min.js"></script>
+    <script src="./assign.js"></script>
+  </body>
+</html>
