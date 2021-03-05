@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Form Validation</title>
   <link rel="stylesheet" href="assign.css">
 </head>
 
@@ -17,8 +17,8 @@
         <legend><span class="number">1</span> Candidate Info</legend>
         <input type="text" name="field1" placeholder="Your Name *">
         <input type="email" name="field2" placeholder="Your Email *">
-        <input type="text" name="field2" placeholder="Your Phone *">
-        <textarea name="field3" placeholder="About yourself"></textarea>
+        <input type="text" name="phone_field" placeholder="Your Phone *">
+        <textarea name="about_field[_words]" placeholder="About yourself"></textarea>
         <label for="job">Interests:</label>
         <select id="job" name="field4">
           <optgroup label="Indoors">
@@ -44,9 +44,10 @@
         <legend><span class="number">2</span> Additional Info</legend>
         <textarea name="field3" placeholder="About Your School"></textarea>
       </fieldset>
-      <input type="button" value="Apply" />
+      <input type="button" value="Apply" onclick="validation();" />
     </form>
   </div>
 </body>
+<script src="assign.js"></script>
 
 </html>
