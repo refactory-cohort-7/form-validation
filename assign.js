@@ -4,8 +4,7 @@ const formN = document.formName.field1;
 const formE = document.formName.field2;
 const formPhone = document.formName.field3;
 const formAboutMySelf = document.formName.field4;
-const formInterests = document.formName.field5;
-const formAboutMySchool = document.formName.field6;
+
 
 // The helper function validating the name field values to be submitted
 let nameCheck = () => {
@@ -43,6 +42,7 @@ let emailCheck = () => {
         return false
     }else if (!formE.value.match(emailRegexp)){
         alert('Please input a valid email address')
+        formE.style.border = '2px solid red';
         return false
     }else {
         return true
@@ -51,16 +51,41 @@ let emailCheck = () => {
 }
 
 // The Phone helper function
-let phoneCheck(){
+let phoneCheck = () => {
     //Regular expression rule to ensure the mobile phone field allows for numbers and a plus sign only.
     const mobileRegexp = /^[\0-9a-zA-Z]+$/;
+    if(formPhone.value==''){
+        formPhone.style.border = '2px solid red';
+        alert('Please type something inside your phone field');
+        return false;
+    }else if (!formPhone.value.match(mobileRegexp)){
+        formPhone.style.border = '2px solid red';
+        alert('Put in a valid phone number');
+        return false;
+    }else{
+        return true;
+    }
 
 }
+
+// The helper function for the about section
+let aboutCheck = () => {
+    if(formAboutMySelf.value.length>50){
+        alert('Please reduce on the characters for this section');
+        formAboutMySelf.style.body = '2px solid red'
+        return false
+    }else {
+        return true
+    }
+}
+
 
 // This is our validation entry function calling all the helper functions
 let validation = () => {
     nameCheck();
     emailCheck();
+    phoneCheck();
+    aboutCheck();
 }
 
 document.formName.addEventListener('submit',validation);
