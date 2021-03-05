@@ -10,15 +10,16 @@
 <body>
 
 <div class="form-style-5">
-<form>
+  <!--Giving field name "assignForm"-->
+  <form action="#" name="assignForm"> 
 <fieldset>
 <legend><span class="number">1</span> Candidate Info</legend>
 <input type="text" name="field1" placeholder="Your Name *">
 <input type="email" name="field2" placeholder="Your Email *">
-<input type="text" name="field2" placeholder="Your Phone *">
-<textarea name="field3" placeholder="About yourself"></textarea>
+<input type="text" name="field3" placeholder="Your Phone *">
+<textarea name="field4" placeholder="About yourself"></textarea>
 <label for="job">Interests:</label>
-<select id="job" name="field4">
+<select id="job" name="field5">
 <optgroup label="Indoors">
   <option value="fishkeeping">Fishkeeping</option>
   <option value="reading">Reading</option>
@@ -40,10 +41,12 @@
 </fieldset>
 <fieldset>
 <legend><span class="number">2</span> Additional Info</legend>
-<textarea name="field3" placeholder="About Your School"></textarea>
+<textarea name="field6" placeholder="About Your School"></textarea>
 </fieldset>
 <input type="submit" value="Apply" />
 </form>
 </div>
 </body>
+<!--This connects the HTML to javascript.-->
+<script src="assign.js"></script>
 </html>
