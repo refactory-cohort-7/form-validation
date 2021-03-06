@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Val5_assign.css">
+</head>
+<body>
+<!-- Create a form with grouped fields -->
+<div class="form-style-5">
+
+<!-- Define the form elements -->
+<form name = "fcandidate">
+  <fieldset>
+  <legend><span class="number">1</span> Candidate Info</legend>
+  
+  <!-- 1st group of input fields. -->
+    <input type="text" name="fname" id = "fname" placeholder="Your Name *">
+    <input type="email" name="femail" placeholder="Your Email *">
+    <input type="text" name="fphone" placeholder="Your Phone * [+256-000-000-000]">
+    <textarea name="fabout" placeholder="About yourself"></textarea>
+    <label for="job">Interests:</label>
+
+    <!-- Dropdown list. -->
+    <select id="job" name="finterests">
+      <optgroup label="Indoors">
+        <option value="fishkeeping">Fishkeeping</option>
+        <option value="reading">Reading</option>
+        <option value="boxing">Boxing</option>
+        <option value="debate">Debate</option>
+        <option value="gaming">Gaming</option>
+        <option value="snooker">Snooker</option>
+        <option value="other_indoor">Other</option>
+      </optgroup>
+      <optgroup label="Outdoors">
+        <option value="football">Football</option>
+        <option value="swimming">Swimming</option>
+        <option value="fishing">Fishing</option>
+        <option value="climbing">Climbing</option>
+        <option value="cycling">Cycling</option>
+        <option value="other_outdoor">Other</option>
+      </optgroup>
+      </select>      
+  </fieldset>
+
+  <!-- 2nd group of input fields. -->
+  <fieldset>
+    <legend><span class="number">2</span> Additional Info</legend>
+    <textarea name="fschool" placeholder="About Your School"></textarea>
+  </fieldset>
+
+  <!-- Submit button. -->
+  <input type="submit" value="Apply"/>
+</form>
+</div>
+
+<!-- Invoke JavaScript to validate the form. -->
+<script src="Val5_assign.js"></script>
+
+</body>
+</html>
