@@ -23,12 +23,14 @@ let myname = () => {
     alert('Please enter a name');
     return false;
   }
+  // Ensuring the name field has more than five characters.
   if (names.value.length < minName) {
     names.focus();
     names.style.border = '2px solid red';
     alert('Please enter a name (at least 5 characters).');
     return false;
   }
+  // Ensuring the name field has only a string of characters.
   if (names.value.match(nameRegex)) {
     return true;
   } else {
@@ -46,7 +48,7 @@ let forEmail = () => {
     alert('Please input your email Address');
     return false;
   }
-
+//Ensuring the email is valid
   if (emailAdd.value.match(emailRegex)) {
     return true;
   } else {
