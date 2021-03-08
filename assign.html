@@ -4,19 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hazel were</title>
+  <!--referencing  the css file-->
   <link rel="stylesheet" href="assign.css">
 </head>
 <body>
+  <!--Creating a form with grouped fields -->
   <div class="form-style-5">
-    <form>
+    <!-- given my form name=hazel-->
+    <form action="#" method="#" name="hazel"> 
     <fieldset>
+      <!--Classes allows CSS and JavaScript to select and access specific elements via the class selectors -->
     <legend><span class="number">1</span> Candidate Info</legend>
+      <!-- initial group of input fields. -->
     <input type="text" name="field1" placeholder="Your Name *">
     <input type="email" name="field2" placeholder="Your Email *">
-    <input type="phone" name="field2" placeholder="Your Phone *">
+    <input type="phone" name="field3" placeholder="Your Phone *">
     <textarea name="field3" placeholder="About yourself"></textarea>
     <label for="job">Interests:</label>
+    <!--list of dropdown-->
     <select id="job" name="field4">
     <optgroup label="Indoors">
       <option value="fishkeeping">Fishkeeping</option>
@@ -37,6 +43,7 @@
     </optgroup>
     </select>      
     </fieldset>
+    <!--second group of input fields-->
     <fieldset>
     <legend><span class="number">2</span> Additional Info</legend>
     <textarea name="field3" placeholder="About Your School"></textarea>
@@ -46,5 +53,6 @@
     </div>
   
 </body>
+<!--linking js file-->
 <script src="assign.js"></script>
 </html>
